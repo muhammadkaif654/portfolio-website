@@ -1222,3 +1222,56 @@ section {
 .footer-social-icons a:hover {
     color: var(--bg-red);
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (MEDIA QUERIES)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* Global Adjustments */
+    section { padding: 80px 5%; }
+    .section-title h2 { font-size: 32px; }
+    
+    /* Navbar & Sidebar */
+    .social-sidebar { display: none; } /* Hides sidebar on phone to save space */
+    .navbar { padding: 15px 5%; flex-direction: column; gap: 15px; background: rgba(18, 18, 18, 0.95); }
+    .navbar nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .navbar nav a { margin: 0 5px; font-size: 14px; }
+    .btn-hire { display: none; } /* Hides top button to keep nav clean */
+
+    /* Hero Section */
+    .hero-section { flex-direction: column; text-align: center; padding-top: 140px; }
+    .hero-content h1 { font-size: 42px; }
+    .hero-content p { margin: 20px auto 30px; }
+    .hero-ctas { justify-content: center; flex-wrap: wrap; }
+    .hero-image { justify-content: center; margin-top: 20px; width: 100%; }
+    .image-wrapper { height: 400px; max-width: 100%; }
+
+    /* About Section */
+    .about-container { flex-direction: column; text-align: center; gap: 40px;}
+    .about-text h2 { font-size: 36px; }
+    .core-stacks { justify-content: center; flex-wrap: wrap; }
+    .about-frame { width: 100%; max-width: 350px; }
+    .about-frame img { width: 100%; height: auto; aspect-ratio: 4/5; }
+    
+    /* Grids (Skills, Soft Skills, Certifications) */
+    .skills-grid { grid-template-columns: 1fr; }
+    .soft-skills-grid { grid-template-columns: 1fr; gap: 15px; }
+    .cert-grid { grid-template-columns: 1fr; }
+    
+    /* Process & Projects */
+    .process-cards { flex-direction: column; align-items: center; }
+    .step-card { width: 100%; padding: 30px 20px; }
+    .project-card { padding: 25px; }
+
+    /* Contact Form */
+    .massive-bg-text { font-size: 25vw; }
+    .contact-form-container { padding: 30px 20px; }
+    .contact-form { grid-template-columns: 1fr; gap: 20px; }
+    .form-footer { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .disclaimer { text-align: left; max-width: 100%; }
+
+    /* Footer */
+    .footer-top, .footer-bottom { flex-direction: column; align-items: center; text-align: center; gap: 25px; }
+    .footer-massive-name { font-size: 22vw; margin: 40px 0; }
+}
