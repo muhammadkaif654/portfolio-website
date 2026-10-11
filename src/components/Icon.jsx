@@ -36,6 +36,9 @@ import {
   FaClock,
   FaKeyboard,
   FaFolderOpen,
+  FaEye,
+  FaComments,
+  FaCircleNodes,
 } from 'react-icons/fa6'
 
 // Name → icon map. Use these names in src/data/content.js
@@ -77,6 +80,9 @@ const ICONS = {
   clock: FaClock,
   keyboard: FaKeyboard,
   folder: FaFolderOpen,
+  eye: FaEye,
+  chat: FaComments,
+  network: FaCircleNodes,
 }
 
 export default function Icon({ name, ...props }) {

@@ -1103,6 +1103,74 @@ main,
 }
 
 /* =====================================================================
+   AI Expertise
+   ===================================================================== */
+.expertise__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.xcard {
+  padding: 26px;
+}
+.xcard .tilt__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.xcard:hover {
+  border-color: rgba(255, 42, 35, 0.45);
+  box-shadow: 0 30px 70px -40px rgba(255, 42, 35, 0.6);
+}
+.xcard__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.xcard__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  color: #fff;
+  background: var(--grad);
+  box-shadow: 0 14px 30px -12px rgba(255, 42, 35, 0.8);
+}
+.xcard__num {
+  color: var(--dim);
+}
+.xcard h3 {
+  font-size: 1.28rem;
+}
+.xcard p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  flex: 1;
+}
+.xcard__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.xcard__proof {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+.xcard__proof svg {
+  color: var(--green);
+  flex: none;
+  margin-top: 3px;
+}
+
+/* =====================================================================
    Skills
    ===================================================================== */
 .skills__legend {
@@ -2550,7 +2618,8 @@ main,
   .soft__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .gh__grid {
+  .gh__grid,
+  .expertise__grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .skills__cards {
@@ -2695,6 +2764,7 @@ main,
   .skills__cards,
   .soft__grid,
   .gh__grid,
+  .expertise__grid,
   .contact__quick,
   .form__row {
     grid-template-columns: 1fr;

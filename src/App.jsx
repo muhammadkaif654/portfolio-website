@@ -7,6 +7,7 @@ import ProjectModal from './components/ProjectModal'
 import Hero from './sections/Hero'
 import Marquee from './sections/Marquee'
 import About from './sections/About'
+import Expertise from './sections/Expertise'
 import Skills from './sections/Skills'
 import SoftSkills from './sections/SoftSkills'
 import Process from './sections/Process'
@@ -99,6 +100,7 @@ export default function App() {
         <Hero />
         <Marquee />
         <About />
+        <Expertise />
         <Skills />
         <SoftSkills />
         <Process />

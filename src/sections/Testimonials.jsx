@@ -48,7 +48,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="section testimonials">
       <div className="container">
-        <SectionHeading eyebrow="Kind Words" title="What people say" sub="Feedback from professors, teammates and collaborators." />
+        <SectionHeading eyebrow="Kind Words" title="What people say" sub="What mentors, supervisors and teammates say about working with me." />
       </div>
       <div
         className="carousel"
