@@ -24,7 +24,7 @@ export const profile = {
   email: 'i240071@isb.nu.edu.pk',
   phone: '+92 337 9872895',
   phoneHref: 'tel:+923379872895',
-  resumeUrl: '/resume.pdf', // TODO: drop your resume at /public/resume.pdf
+  resumeUrl: '/resume.pdf', // your CV lives at /public/resume.pdf
   photo: '/images/profile.jpeg', // real photo — front of the 3D ID badge
   illustration: '/images/illustration.png', // illustration — back of the 3D ID badge
   available: true,
