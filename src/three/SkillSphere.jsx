@@ -7,7 +7,7 @@ import { useAnchor, createDragRotate } from './useAnchor'
 import { store, setStore } from '../lib/store'
 import { skillCategories } from '../data/content'
 
-const R = 0.37
+const R = 0.4
 const WHITE = new THREE.Color('#f2f2f5')
 const DIM = new THREE.Color('#7c7c8c')
 const RED = new THREE.Color('#ff4b3e')
@@ -22,7 +22,7 @@ function Tag({ item, base, registry }) {
         <Text
           ref={text}
           font={fontUrl}
-          fontSize={0.03}
+          fontSize={0.026}
           anchorX="center"
           anchorY="middle"
           color={item.level === 'core' ? '#f2f2f5' : '#7c7c8c'}

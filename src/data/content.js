@@ -14,9 +14,9 @@ export const profile = {
   firstName: 'Muhammad',
   logo: 'MuhammadKaif',
   // Rotating titles in the hero (typed / scrambled one after another)
-  roles: ['AI & Robotics Engineer', 'AI Agent Builder', 'Full Stack Developer', 'Automation Architect'],
-  tagline: 'I architect scalable backend systems, AI agents, and intelligent automation solutions.',
-  bio: "Hi, I'm Muhammad Kaif — an AI Engineer and Full Stack Developer studying at FAST NUCES in Islamabad. I build intelligent AI-based systems and craft autonomous agents to transform complex technical bottlenecks into streamlined, automated solutions.",
+  roles: ['AI Engineer', 'ML Engineer', 'Vision AI Developer', 'LLM & Agent Builder', 'Full Stack Developer'],
+  tagline: 'I build machine learning models, computer vision systems and LLM-powered agents — and ship them as full-stack products.',
+  bio: "Hi, I'm Muhammad Kaif — an AI Engineer studying Artificial Intelligence at FAST NUCES in Islamabad. My work spans machine learning, deep learning and computer vision, NLP & LLMs, knowledge representation & reasoning, and autonomous agents. I take models from raw data to measurable results (95% Recall@1 visual search, R² 0.886 price prediction) and deploy them behind real APIs, databases and interfaces.",
   location: 'Islamabad, Pakistan',
   coords: { lat: 33.6844, lon: 73.0479 }, // used by the 3D globe in the contact section
   timezone: 'Asia/Karachi',
@@ -38,15 +38,16 @@ export const socials = [
 ]
 
 export const coreStacks = [
-  { label: 'AI Based Systems', icon: 'brain' },
-  { label: 'AI Agents', icon: 'robot' },
-  { label: 'Full Stack', icon: 'server' },
+  { label: 'Machine Learning', icon: 'brain' },
+  { label: 'Computer Vision', icon: 'eye' },
+  { label: 'LLMs & AI Agents', icon: 'robot' },
+  { label: 'Full Stack & Databases', icon: 'server' },
 ]
 
 // "Currently" card in the About section — TODO: keep this fresh
 export const currently = [
   { label: 'Building', value: 'Agentic AI & n8n automation workflows', icon: 'bolt' },
-  { label: 'Exploring', value: 'Three.js, WebGL & 3D on the web', icon: 'cube' },
+  { label: 'Exploring', value: 'Metric learning & open-set recognition', icon: 'eye' },
   { label: 'Studying', value: 'BS Artificial Intelligence @ FAST NUCES', icon: 'graduation' },
 ]
 
@@ -61,22 +62,104 @@ export const stats = [
 
 // Infinite marquee strip under the hero
 export const marquee = [
-  'Python', 'C++', 'LLMs', 'AI Agents', 'n8n', 'LangChain', 'CrewAI', 'ROS 2', 'OpenCV', 'React',
-  'Node.js', 'Three.js', 'MongoDB', 'PostgreSQL', 'Docker', 'Linux', 'RAG', 'Computer Vision',
+  'Machine Learning', 'Computer Vision', 'Deep Learning', 'LLMs', 'AI Agents', 'RAG', 'NLP', 'Knowledge Representation',
+  'Scikit-Learn', 'XGBoost', 'OpenCV', 'FAISS', 'LangChain', 'n8n', 'ROS 2', 'Python', 'FastAPI', 'React', 'PostgreSQL', 'MongoDB',
 ]
 
 /* ----------------------------- SKILLS -------------------------------- */
 // level: 'core' = hands-on project experience, 'familiar' = familiar / learning
 export const skillCategories = [
   {
-    id: 'ai',
-    title: 'AI & Robotics',
+    id: 'ml',
+    title: 'Machine Learning',
     icon: 'brain',
     skills: [
-      { name: 'LLMs & AI Agents', short: 'LLMs', level: 'core' },
+      { name: 'Supervised & Unsupervised Learning', short: 'ML', level: 'core' },
+      { name: 'Scikit-Learn & XGBoost', short: 'XGBoost', level: 'core' },
+      { name: 'Feature Engineering & Model Evaluation', short: 'Features', level: 'core' },
+      { name: 'Hyperparameter Tuning (CV Search)', short: 'Tuning', level: 'core' },
+      { name: 'SHAP Explainability', short: 'SHAP', level: 'core' },
+      { name: 'Pandas & NumPy', short: 'Pandas', level: 'core' },
+    ],
+  },
+  {
+    id: 'cv',
+    title: 'Deep Learning & Computer Vision',
+    icon: 'eye',
+    skills: [
       { name: 'Computer Vision (OpenCV)', short: 'OpenCV', level: 'core' },
-      { name: 'ROS 2 & Gazebo Simulation', short: 'ROS 2', level: 'core' },
-      { name: 'Machine Learning & Scikit-Learn', short: 'Scikit-Learn', level: 'core' },
+      { name: 'Hand & Pose Tracking (MediaPipe)', short: 'MediaPipe', level: 'core' },
+      { name: 'CNNs & Transfer Learning (ResNet50)', short: 'CNNs', level: 'core' },
+      { name: 'Metric Learning (Triplet / ArcFace)', short: 'ArcFace', level: 'core' },
+      { name: 'CLIP & Embedding Search (FAISS)', short: 'FAISS', level: 'core' },
+    ],
+  },
+  {
+    id: 'nlp',
+    title: 'NLP & Large Language Models',
+    icon: 'chat',
+    skills: [
+      { name: 'LLMs (Llama 3.3, Qwen)', short: 'LLMs', level: 'core' },
+      { name: 'Prompt Engineering', short: 'Prompting', level: 'core' },
+      { name: 'Speech-to-Text (Whisper)', short: 'Whisper', level: 'core' },
+      { name: 'Retrieval-Augmented Generation (RAG)', short: 'RAG', level: 'familiar' },
+      { name: 'Vector Databases (Pinecone / Milvus)', short: 'Pinecone', level: 'familiar' },
+    ],
+  },
+  {
+    id: 'auto',
+    title: 'AI Agents & Automation',
+    icon: 'robot',
+    skills: [
+      { name: 'n8n Workflow Automation', short: 'n8n', level: 'core' },
+      { name: 'CrewAI & LangChain Agents', short: 'LangChain', level: 'core' },
+      { name: 'Voice Agents (Vapi.ai)', short: 'Vapi.ai', level: 'core' },
+      { name: 'API Integrations & Webhooks', short: 'Webhooks', level: 'core' },
+    ],
+  },
+  {
+    id: 'krr',
+    title: 'Knowledge Representation & Reasoning',
+    icon: 'network',
+    skills: [
+      { name: 'Propositional & First-Order Logic', short: 'FOL', level: 'core' },
+      { name: 'Inference & Resolution', short: 'Inference', level: 'core' },
+      { name: 'Search & Planning (A*, Heuristics)', short: 'A* Search', level: 'core' },
+      { name: 'Knowledge Graphs & Ontologies', short: 'Knowledge Graphs', level: 'familiar' },
+    ],
+  },
+  {
+    id: 'robotics',
+    title: 'Robotics & Embedded AI',
+    icon: 'chip',
+    skills: [
+      { name: 'ROS 2', level: 'core' },
+      { name: 'Gazebo Simulation', short: 'Gazebo', level: 'core' },
+      { name: 'ESP32 & Sensor Networks', short: 'ESP32', level: 'core' },
+      { name: 'MQTT Messaging', short: 'MQTT', level: 'core' },
+    ],
+  },
+  {
+    id: 'db',
+    title: 'Databases',
+    icon: 'database',
+    skills: [
+      { name: 'SQL (PostgreSQL / MySQL)', short: 'PostgreSQL', level: 'core' },
+      { name: 'MongoDB', level: 'core' },
+      { name: 'Triggers & Stored Procedures', short: 'SQL Triggers', level: 'core' },
+      { name: 'Aiven Cloud Services', short: 'Aiven', level: 'familiar' },
+    ],
+  },
+  {
+    id: 'web',
+    title: 'Full Stack',
+    icon: 'server',
+    skills: [
+      { name: 'React & Next.js', short: 'React', level: 'core' },
+      { name: 'Node.js & Express.js', short: 'Node.js', level: 'core' },
+      { name: 'FastAPI (ML Model Serving)', short: 'FastAPI', level: 'core' },
+      { name: 'REST APIs & GraphQL', short: 'GraphQL', level: 'familiar' },
+      { name: 'Three.js & React Three Fiber', short: 'Three.js', level: 'familiar' },
     ],
   },
   {
@@ -87,7 +170,7 @@ export const skillCategories = [
       { name: 'Python', level: 'core' },
       { name: 'C++', level: 'core' },
       { name: 'JavaScript / TypeScript', short: 'TypeScript', level: 'core' },
-      { name: 'HTML & CSS', short: 'HTML/CSS', level: 'core' },
+      { name: 'SQL & Bash', short: 'Bash', level: 'core' },
     ],
   },
   {
@@ -96,54 +179,68 @@ export const skillCategories = [
     icon: 'tools',
     skills: [
       { name: 'Git & GitHub', short: 'Git', level: 'core' },
-      { name: 'Docker & Containers', short: 'Docker', level: 'familiar' },
+      { name: 'Jupyter Notebooks', short: 'Jupyter', level: 'core' },
       { name: 'Linux & Bash Scripting', short: 'Linux', level: 'core' },
-      { name: 'VS Code & Postman', short: 'Postman', level: 'core' },
-    ],
-  },
-  {
-    id: 'web',
-    title: 'Full Stack',
-    icon: 'server',
-    skills: [
-      { name: 'React & Next.js', short: 'React', level: 'core' },
-      { name: 'Node.js & Express.js', short: 'Node.js', level: 'core' },
-      { name: 'REST APIs & GraphQL', short: 'GraphQL', level: 'familiar' },
-      { name: 'Three.js & React Three Fiber', short: 'Three.js', level: 'familiar' },
-    ],
-  },
-  {
-    id: 'db',
-    title: 'Databases',
-    icon: 'database',
-    skills: [
-      { name: 'SQL (PostgreSQL / MySQL)', short: 'PostgreSQL', level: 'core' },
-      { name: 'MongoDB', level: 'core' },
-      { name: 'Vector Databases (Pinecone / Milvus)', short: 'Pinecone', level: 'familiar' },
-      { name: 'Aiven Cloud Services', short: 'Aiven', level: 'familiar' },
-    ],
-  },
-  {
-    id: 'auto',
-    title: 'AI Automation',
-    icon: 'workflow',
-    skills: [
-      { name: 'n8n Workflow Automation', short: 'n8n', level: 'core' },
-      { name: 'CrewAI & LangChain Agents', short: 'LangChain', level: 'core' },
-      { name: 'Autonomous RAG Pipelines', short: 'RAG', level: 'familiar' },
-      { name: 'API Integrations & Webhooks', short: 'Webhooks', level: 'core' },
+      { name: 'Docker & Containers', short: 'Docker', level: 'familiar' },
     ],
   },
   {
     id: 'cs',
     title: 'Computer Science Concepts',
-    icon: 'chip',
+    icon: 'graduation',
     skills: [
-      { name: 'Database Management Systems (DBMS)', short: 'DBMS', level: 'core' },
+      { name: 'Data Structures & Algorithms', short: 'DSA', level: 'core' },
       { name: 'Object-Oriented Programming (OOP)', short: 'OOP', level: 'core' },
+      { name: 'Database Management Systems (DBMS)', short: 'DBMS', level: 'core' },
       { name: 'Operating Systems (Linux/Ubuntu)', short: 'OS', level: 'core' },
-      { name: 'Software Engineering & Architecture', short: 'Architecture', level: 'core' },
     ],
+  },
+]
+
+/* --------------------------- AI EXPERTISE ---------------------------- */
+// "AI Expertise" section: one card per focus area, each backed by proof from a real project.
+export const aiExpertise = [
+  {
+    title: 'Machine Learning',
+    icon: 'brain',
+    text: 'End-to-end ML pipelines: data cleaning, feature engineering, leakage-safe splits, model comparison, hyperparameter tuning and explainability.',
+    tags: ['Scikit-Learn', 'XGBoost', 'Random Forest', 'SHAP', 'Pandas'],
+    proof: 'House Price Prediction: R² 0.886 on ~93K listings',
+  },
+  {
+    title: 'Deep Learning & Computer Vision',
+    icon: 'eye',
+    text: 'Metric learning, transfer learning and real-time vision: embeddings trained with triplet and ArcFace loss, image retrieval and hand tracking.',
+    tags: ['OpenCV', 'MediaPipe', 'ResNet50', 'CLIP', 'ArcFace', 'FAISS'],
+    proof: 'SoleMatch: 95.0% Recall@1 on 645 unseen queries',
+  },
+  {
+    title: 'NLP & Large Language Models',
+    icon: 'chat',
+    text: 'LLM-powered applications with prompt engineering, retrieval-augmented generation, speech-to-text and vector search.',
+    tags: ['Llama 3.3', 'Qwen', 'Whisper', 'RAG', 'Pinecone'],
+    proof: 'Synapse wearable: Whisper + Qwen context-aware assistant',
+  },
+  {
+    title: 'AI Agents & Automation',
+    icon: 'robot',
+    text: 'Autonomous agents and voice assistants wired into real tools: calendars, spreadsheets, web scrapers and email.',
+    tags: ['LangChain', 'CrewAI', 'n8n', 'Vapi.ai', 'Webhooks'],
+    proof: 'Clara: AI receptionist that books real appointments',
+  },
+  {
+    title: 'Knowledge Representation & Reasoning',
+    icon: 'network',
+    text: 'Logic-based AI: propositional and first-order logic, inference and resolution, knowledge graphs, plus heuristic search and planning.',
+    tags: ['First-Order Logic', 'Inference', 'Knowledge Graphs', 'A* Search'],
+    proof: 'A* pathfinding inside the Synapse wearable',
+  },
+  {
+    title: 'Robotics & Embedded AI',
+    icon: 'chip',
+    text: 'Autonomous navigation, simulation and sensor networks: bringing AI out of the notebook and onto hardware.',
+    tags: ['ROS 2', 'Gazebo', 'ESP32', 'MQTT'],
+    proof: 'Medidash: autonomous medical robot on ROS 2',
   },
 ]
 
@@ -175,51 +272,78 @@ export const process = {
 // details: shown in the case-study modal when a card is clicked — TODO: add problem / approach / results.
 export const projectFilters = [
   { id: 'all', label: 'All' },
-  { id: 'ai', label: 'AI & Agents' },
+  { id: 'ml', label: 'ML & Deep Learning' },
+  { id: 'agents', label: 'LLMs & Agents' },
   { id: 'cv', label: 'Vision & Robotics' },
-  { id: 'web', label: 'Web & 3D' },
+  { id: 'web', label: 'Full Stack & 3D' },
   { id: 'systems', label: 'Systems & DSA' },
 ]
 
 export const projects = [
   {
+    id: 'solematch',
+    title: 'SoleMatch — Visual Sneaker Search',
+    flag: '🔎 Deep Learning & Retrieval',
+    category: 'ml',
+    year: '2026',
+    summary: 'Upload a photo, get the sneaker. Fine-tuned ResNet50 triplet embeddings over FAISS — 95.0% Recall@1 on unseen queries.',
+    description: 'Sneaker visual search engine — upload a photo, get the model plus visually similar alternatives from a 3,433-image catalog. Compares zero-shot CLIP ViT-B/32 against a ResNet50 fine-tuned with triplet loss, indexed in FAISS. Fine-tuning lifted Recall@1 from 82.8% to 95.0% on 645 held-out queries that were never indexed or trained on. React + Three.js frontend on a FastAPI retrieval service.',
+    tech: ['ResNet50', 'Triplet Loss', 'CLIP', 'FAISS', 'FastAPI', 'React'],
+    links: { github: 'https://github.com/muhammadkaif654/solematch-visual-search' },
+    image: null,
+    highlights: ['95.0% Recall@1 (up from 82.8% zero-shot CLIP)', '645 held-out queries across 43 sneaker models', 'MRR 0.954'],
+  },
+  {
+    id: 'house-price',
+    title: 'House Price Prediction — End-to-End ML',
+    flag: '📈 Machine Learning',
+    category: 'ml',
+    year: '2026',
+    summary: 'Property valuation for Lahore, Karachi & Islamabad: ~93K listings, tuned Random Forest with R² 0.886 and SHAP explanations.',
+    description: 'An AI-assisted property valuation system built from raw Zameen.com listings to a trained model, a REST API and a web interface. Covers data cleaning, leakage-safe feature engineering, EDA, comparison of Linear Regression, Random Forest and XGBoost, RandomizedSearchCV tuning and SHAP explainability. Served with FastAPI and a React frontend.',
+    tech: ['Scikit-Learn', 'XGBoost', 'SHAP', 'Pandas', 'FastAPI', 'React'],
+    links: { github: 'https://github.com/muhammadkaif654/house-price-prediction' },
+    image: null,
+    highlights: ['R² 0.886 with a tuned Random Forest', '~93K cleaned listings, 20% held-out test set', 'SHAP explanations for every prediction'],
+  },
+  {
+    id: 'charaid',
+    title: 'CharaID — Open-Set Character Recognition',
+    flag: '👁️ Deep Learning & CV',
+    category: 'ml',
+    year: '2026',
+    summary: 'Recognises anime characters from a photo using ArcFace embeddings — new characters need 5 images and zero retraining.',
+    description: 'An open-set recognition system built like production face recognition: an anime-specific face detector, an encoder trained with ArcFace (additive angular margin) loss producing 512-d embeddings, and cosine matching against a FAISS gallery with a calibrated threshold so it can answer "unknown" instead of guessing. Results are enriched from the AniList GraphQL API. Evaluated on characters held out from training entirely.',
+    tech: ['ArcFace', 'Metric Learning', 'FAISS', 'Python', 'GraphQL'],
+    links: { github: 'https://github.com/muhammadkaif654/charaid' },
+    image: null,
+    highlights: ['Open-set: add a character with 5 images, no retraining', 'Calibrated "unknown" threshold'],
+  },
+  {
     id: 'clara',
     title: 'Clara — AI Voice Receptionist',
-    flag: '🎙️ AI Voice & Automation',
-    category: 'ai',
+    flag: '🎙️ AI Voice Agent',
+    category: 'agents',
     year: '2026',
     summary: 'Inbound AI voice agent that answers clinic calls, checks live availability and books appointments through natural conversation.',
     description: 'Developed an inbound AI voice agent that answers clinic calls, checks real-time appointment availability against Google Calendar, and schedules bookings via natural conversation. Built with Vapi.ai for voice orchestration and self-hosted n8n workflows for backend calendar logic.',
-    tech: ['Vapi.ai', 'n8n', 'Google Calendar'],
+    tech: ['Vapi.ai', 'LLMs', 'n8n', 'Google Calendar'],
     links: { github: 'https://github.com/muhammadkaif654/vapi-n8n-dental-assistant' },
-    image: null,
-    highlights: [], // TODO e.g. ['Handles 100% of after-hours calls', 'Avg booking in 45s']
-  },
-  {
-    id: 'agents-hub',
-    title: 'Production AI Automation Agents Hub',
-    flag: '🤖 AI Agents & Pipelines',
-    category: 'ai',
-    year: '2026',
-    summary: 'A curated hub of autonomous AI agent pipelines including a deep web-scraping lead-generation builder.',
-    description: 'Architected a curated repository of high-performance, autonomous AI agent pipelines. Designed a deep web-scraping lead generation builder utilizing Tavily, Groq (Llama 3.3), Firecrawl, and Google Sheets for rapid production deployment.',
-    tech: ['Groq (Llama 3.3)', 'Firecrawl', 'Tavily', 'Google Sheets'],
-    links: { github: 'https://github.com/muhammadkaif654/ai-automation-agents' },
     image: null,
     highlights: [],
   },
   {
-    id: 'solematch',
-    title: 'SoleMatch — Visual Sneaker Search',
-    flag: '🔎 AI & Retrieval',
-    category: 'ai',
+    id: 'agents-hub',
+    title: 'AI Automation Agents Hub',
+    flag: '🤖 AI Agents & Pipelines',
+    category: 'agents',
     year: '2026',
-    summary: 'Upload a photo, get the sneaker. CLIP vs fine-tuned ResNet50 triplet embeddings over FAISS — 95.0% Recall@1.',
-    description: 'Sneaker visual search engine — upload a photo, get the model. Compares CLIP against fine-tuned ResNet50 triplet embeddings over FAISS, measured on 645 held-out queries (95.0% Recall@1). React + Three.js frontend on a FastAPI retrieval service.',
-    tech: ['PyTorch', 'CLIP', 'FAISS', 'FastAPI', 'Three.js'],
-    links: { github: 'https://github.com/muhammadkaif654/solematch-visual-search' },
+    summary: 'Autonomous LLM agent pipelines, including a lead-generation agent that researches companies and drafts outreach.',
+    description: 'Architected a curated repository of high-performance, autonomous AI agent pipelines. Includes a deep web-scraping lead generation builder using Tavily, Groq (Llama 3.3), Firecrawl and Google Sheets, which analyses each business with an LLM and drafts personalised outreach emails automatically.',
+    tech: ['Groq (Llama 3.3)', 'n8n', 'Firecrawl', 'Tavily'],
+    links: { github: 'https://github.com/muhammadkaif654/ai-automation-agents' },
     image: null,
-    highlights: ['95.0% Recall@1', '645 held-out queries'],
+    highlights: [],
   },
   {
     id: 'synapse',
@@ -227,9 +351,9 @@ export const projects = [
     flag: '🚀 AI & Hardware',
     category: 'cv',
     year: '2025',
-    summary: 'Wearable Body Area Network with ESP32, GPS and biometric sensors feeding context-aware AI.',
-    description: 'Engineered a wearable Body Area Network utilizing ESP32, GPS, and biometric sensors. Integrated Whisper, Qwen, and A* pathfinding to translate data into context-aware AI interactions.',
-    tech: ['Python', 'ESP32', 'Whisper', 'Algorithms'],
+    summary: 'Wearable Body Area Network with ESP32, GPS and biometric sensors feeding a Whisper + Qwen context-aware assistant.',
+    description: 'Engineered a wearable Body Area Network utilizing ESP32, GPS, and biometric sensors. Integrated Whisper speech-to-text, the Qwen LLM and A* pathfinding to translate sensor data into context-aware AI interactions.',
+    tech: ['Python', 'Whisper', 'Qwen', 'A* Search', 'ESP32'],
     links: { github: 'https://github.com/muhammadkaif654' },
     image: null,
     highlights: [],
@@ -261,6 +385,19 @@ export const projects = [
     highlights: [],
   },
   {
+    id: 'rideflow',
+    title: 'RideFlow Ride-Sharing Platform',
+    flag: '🌐 Full Stack',
+    category: 'web',
+    year: '2025',
+    summary: 'Full-stack ride-hailing app with real-time trip lifecycles, JWT auth and a built-in PKR wallet.',
+    description: 'Developed a full-stack application with real-time ride-matching capabilities. Architected complex workflows using MongoDB, SQL triggers, and Node.js, with secure JWT authentication and a built-in PKR wallet system.',
+    tech: ['Node.js', 'Express', 'MongoDB', 'SQL', 'JWT'],
+    links: { github: 'https://github.com/muhammadkaif654/RideFlow-Node-JS' },
+    image: null,
+    highlights: [],
+  },
+  {
     id: 'chess-3d',
     title: '3D Anime Chess',
     flag: '♟️ 3D Web',
@@ -270,19 +407,6 @@ export const projects = [
     description: 'A 3D anime-themed chess game — real chess rules (chess.js) rendered in Three.js/React Three Fiber, with pieces styled as Attack on Titan characters. Built with React, TypeScript, and Vite.',
     tech: ['React', 'TypeScript', 'R3F', 'chess.js'],
     links: { github: 'https://github.com/muhammadkaif654/3d-chess-game' },
-    image: null,
-    highlights: [],
-  },
-  {
-    id: 'rideflow',
-    title: 'RideFlow Ride-Sharing Platform',
-    flag: '🌐 Full Stack',
-    category: 'web',
-    year: '2025',
-    summary: 'Full-stack ride-hailing app with real-time trip lifecycles, JWT auth and a built-in PKR wallet.',
-    description: 'Developed a full-stack application with real-time ride-matching capabilities. Architected complex workflows using MongoDB, SQL triggers, and Node.js, with secure JWT authentication and a built-in PKR wallet system.',
-    tech: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-    links: { github: 'https://github.com/muhammadkaif654/RideFlow-Node-JS' },
     image: null,
     highlights: [],
   },
@@ -361,10 +485,21 @@ export const certifications = {
 export const testimonials = {
   enabled: true,
   items: [
-    { quote: 'Placeholder — a short quote from a professor about your work ethic and technical depth goes here.', name: 'Professor Name', role: 'Faculty, FAST NUCES' },
-    { quote: 'Placeholder — a teammate describing what it was like to build a project with you.', name: 'Teammate Name', role: 'Project Partner' },
-    { quote: 'Placeholder — a client or hackathon judge on the impact of what you delivered.', name: 'Client Name', role: 'Founder, Company' },
-    { quote: 'Placeholder — a mentor on your growth in AI engineering and automation.', name: 'Mentor Name', role: 'Senior Engineer' },
+    {
+      quote: 'Kaif kept our whole team on track. He broke the project into clear milestones, gave everyone ownership of a piece, ran quick check-ins and made sure we shipped on time without anyone burning out. Easily the best-managed project I have been part of.',
+      name: 'Teammate',
+      role: 'University project team',
+    },
+    {
+      quote: "Kaif's AI skills are genuinely amazing. He doesn't just call a library — he understands why a model works, evaluates it honestly and pushes it until the results are strong. He picks up new techniques remarkably fast.",
+      name: 'AI Project Mentor',
+      role: 'Programming for AI project',
+    },
+    {
+      quote: 'His leadership on our civics project was outstanding. Kaif organised the group, delegated with confidence, motivated everyone to contribute and represented the team clearly from start to finish.',
+      name: 'Civics Project Supervisor',
+      role: 'Civics project, FAST NUCES',
+    },
   ],
 }
 
@@ -404,6 +539,7 @@ export const footer = {
 export const nav = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
+  { id: 'expertise', label: 'AI Expertise' },
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'journey', label: 'Journey' },
