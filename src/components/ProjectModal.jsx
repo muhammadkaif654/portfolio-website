@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Icon from './Icon'
+import { CoverImage } from './ui'
 import { stopScroll } from '../lib/loop'
 
 /** Case-study modal. Fill `details`, `highlights`, `image`, `links.live`, `links.video` in content.js. */
@@ -23,7 +24,7 @@ export default function ProjectModal({ project: p, onClose }) {
             <Icon name="close" />
           </button>
           <div className="modal__cover">
-            {p.image ? <img src={p.image} alt="" /> : <div className="modal__art">{p.flag.split(' ')[0]}</div>}
+            {p.image ? <CoverImage className="modal__img" src={p.image} lazy={false} /> : <div className="modal__art">{p.flag.split(' ')[0]}</div>}
           </div>
           <div className="modal__body">
             <div className="mono modal__meta">

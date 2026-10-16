@@ -269,7 +269,7 @@ export const process = {
 
 /* ---------------------------- PROJECTS ------------------------------- */
 // category must match one of `projectFilters` ids below.
-// image: optional cover image ('/images/projects/clara.png'). Without one a generated 3D-style cover is shown.
+// image: cover image in /public/images/projects (1600x832 .webp). Without one a generated 3D-style cover is shown.
 // details: shown in the case-study modal when a card is clicked — TODO: add problem / approach / results.
 export const projectFilters = [
   { id: 'all', label: 'All' },
@@ -291,7 +291,7 @@ export const projects = [
     description: 'Sneaker visual search engine — upload a photo, get the model plus visually similar alternatives from a 3,433-image catalog. Compares zero-shot CLIP ViT-B/32 against a ResNet50 fine-tuned with triplet loss, indexed in FAISS. Fine-tuning lifted Recall@1 from 82.8% to 95.0% on 645 held-out queries that were never indexed or trained on. React + Three.js frontend on a FastAPI retrieval service.',
     tech: ['ResNet50', 'Triplet Loss', 'CLIP', 'FAISS', 'FastAPI', 'React'],
     links: { github: 'https://github.com/muhammadkaif654/solematch-visual-search' },
-    image: null,
+    image: '/images/projects/solematch.webp',
     highlights: ['95.0% Recall@1 (up from 82.8% zero-shot CLIP)', '645 held-out queries across 43 sneaker models', 'MRR 0.954'],
   },
   {
@@ -304,7 +304,7 @@ export const projects = [
     description: "Turns a broadcast football clip into tracked players, a bird's-eye tactical map, player and team metrics, heatmaps and shareable reports, all from a Streamlit dashboard that runs on an ordinary laptop. Players, goalkeepers, referees and the ball are detected with fine-tuned YOLO11 models and tracked with ByteTrack; jersey colours are clustered with KMeans to split the teams; a 32-keypoint pose model plus ORB/RANSAC camera-motion tracking fits a homography to a 105 × 68 m pitch, even with a panning, zooming camera. From there it computes distance, top speed, sprints and possession, and exports annotated H.264 video, CSV/Excel reports and heatmaps. OpenVINO runs the models on an Intel integrated GPU 3–4× faster than the CPU.",
     tech: ['YOLO11', 'ByteTrack', 'OpenCV', 'Homography', 'OpenVINO', 'Streamlit'],
     links: { github: 'https://github.com/muhammadkaif654/pitchvision-ai-football-analytics' },
-    image: null,
+    image: '/images/projects/pitchvision.webp',
     highlights: [
       'Custom models find the ball in 93% of frames vs 47% pretrained',
       'mAP50: players 0.88, ball 0.96, pitch keypoints 0.995',
@@ -322,7 +322,7 @@ export const projects = [
     description: 'An AI-assisted property valuation system built from raw Zameen.com listings to a trained model, a REST API and a web interface. Covers data cleaning, leakage-safe feature engineering, EDA, comparison of Linear Regression, Random Forest and XGBoost, RandomizedSearchCV tuning and SHAP explainability. Served with FastAPI and a React frontend.',
     tech: ['Scikit-Learn', 'XGBoost', 'SHAP', 'Pandas', 'FastAPI', 'React'],
     links: { github: 'https://github.com/muhammadkaif654/house-price-prediction' },
-    image: null,
+    image: '/images/projects/house-price.webp',
     highlights: ['R² 0.886 with a tuned Random Forest', '~93K cleaned listings, 20% held-out test set', 'SHAP explanations for every prediction'],
   },
   {
@@ -335,7 +335,7 @@ export const projects = [
     description: 'An open-set recognition system built like production face recognition: an anime-specific face detector, an encoder trained with ArcFace (additive angular margin) loss producing 512-d embeddings, and cosine matching against a FAISS gallery with a calibrated threshold so it can answer "unknown" instead of guessing. Results are enriched from the AniList GraphQL API. Evaluated on characters held out from training entirely.',
     tech: ['ArcFace', 'Metric Learning', 'FAISS', 'Python', 'GraphQL'],
     links: { github: 'https://github.com/muhammadkaif654/charaid' },
-    image: null,
+    image: '/images/projects/charaid.webp',
     highlights: ['Open-set: add a character with 5 images, no retraining', 'Calibrated "unknown" threshold'],
   },
   {
@@ -348,7 +348,7 @@ export const projects = [
     description: 'Developed an inbound AI voice agent that answers clinic calls, checks real-time appointment availability against Google Calendar, and schedules bookings via natural conversation. Built with Vapi.ai for voice orchestration and self-hosted n8n workflows for backend calendar logic.',
     tech: ['Vapi.ai', 'LLMs', 'n8n', 'Google Calendar'],
     links: { github: 'https://github.com/muhammadkaif654/vapi-n8n-dental-assistant' },
-    image: null,
+    image: '/images/projects/clara.webp',
     highlights: [],
   },
   {
@@ -361,7 +361,7 @@ export const projects = [
     description: 'Architected a curated repository of high-performance, autonomous AI agent pipelines. Includes a deep web-scraping lead generation builder using Tavily, Groq (Llama 3.3), Firecrawl and Google Sheets, which analyses each business with an LLM and drafts personalised outreach emails automatically.',
     tech: ['Groq (Llama 3.3)', 'n8n', 'Firecrawl', 'Tavily'],
     links: { github: 'https://github.com/muhammadkaif654/ai-automation-agents' },
-    image: null,
+    image: '/images/projects/agents-hub.webp',
     highlights: [],
   },
   {
@@ -374,7 +374,7 @@ export const projects = [
     description: 'Engineered a wearable Body Area Network utilizing ESP32, GPS, and biometric sensors. Integrated Whisper speech-to-text, the Qwen LLM and A* pathfinding to translate sensor data into context-aware AI interactions.',
     tech: ['Python', 'Whisper', 'Qwen', 'A* Search', 'ESP32'],
     links: { github: 'https://github.com/muhammadkaif654' },
-    image: null,
+    image: '/images/projects/synapse.webp',
     highlights: [],
   },
   {
@@ -387,7 +387,7 @@ export const projects = [
     description: 'Developed a CV system that accurately translates hand gestures into touchless desktop commands, mapping hand landmarks to complex OS commands with dedicated modes for mouse, keyboard, presentation, and media control. Designed a responsive GUI utilizing Figma and Tkinter.',
     tech: ['Python', 'OpenCV', 'MediaPipe'],
     links: { github: 'https://github.com/muhammadkaif654/Phantom-Key' },
-    image: null,
+    image: '/images/projects/phantom-key.webp',
     highlights: [],
   },
   {
@@ -400,7 +400,7 @@ export const projects = [
     description: 'Deployed an autonomous healthcare robot integrating custom hardware with ROS 2. Configured MQTT protocols to coordinate safe machine navigation.',
     tech: ['ROS 2', 'Gazebo', 'MQTT', 'Hardware'],
     links: { github: 'https://github.com/muhammadkaif654' },
-    image: null,
+    image: '/images/projects/medidash.webp',
     highlights: [],
   },
   {
@@ -413,7 +413,7 @@ export const projects = [
     description: 'Developed a full-stack application with real-time ride-matching capabilities. Architected complex workflows using MongoDB, SQL triggers, and Node.js, with secure JWT authentication and a built-in PKR wallet system.',
     tech: ['Node.js', 'Express', 'MongoDB', 'SQL', 'JWT'],
     links: { github: 'https://github.com/muhammadkaif654/RideFlow-Node-JS' },
-    image: null,
+    image: '/images/projects/rideflow.webp',
     highlights: [],
   },
   {
@@ -426,7 +426,7 @@ export const projects = [
     description: 'A 3D anime-themed chess game — real chess rules (chess.js) rendered in Three.js/React Three Fiber, with pieces styled as Attack on Titan characters. Built with React, TypeScript, and Vite.',
     tech: ['React', 'TypeScript', 'R3F', 'chess.js'],
     links: { github: 'https://github.com/muhammadkaif654/3d-chess-game' },
-    image: null,
+    image: '/images/projects/chess-3d.webp',
     highlights: [],
   },
   {
@@ -439,7 +439,7 @@ export const projects = [
     description: 'Designed a high-performance system to organize and query over 5,044 movies. Modeled movies as vertices within a custom graph structure to facilitate complex relation mapping and optimized time complexity for searching, recommending, and sorting operations.',
     tech: ['C++', 'Graphs', 'Data Structures'],
     links: { github: 'https://github.com/muhammadkaif654/Movie-Manager-DSA' },
-    image: null,
+    image: '/images/projects/movie-manager.webp',
     highlights: ['5,044 movies indexed'],
   },
 ]

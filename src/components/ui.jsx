@@ -3,6 +3,15 @@ import { isTouch, prefersReducedMotion } from '../lib/device'
 
 const CHARS = '!<>-_/[]{}=+*^?#01'
 
+/** Project thumbnail shown whole at any box shape; a blurred copy of itself fills the spare space. */
+export function CoverImage({ src, className = '', lazy = true }) {
+  return (
+    <div className={`cover-img ${className}`} style={{ '--cover': `url("${src}")` }}>
+      <img src={src} alt="" loading={lazy ? 'lazy' : undefined} />
+    </div>
+  )
+}
+
 /** Wrap any element to make it gently follow the pointer. */
 export function Magnetic({ children, strength = 0.3, className = '' }) {
   const ref = useRef()

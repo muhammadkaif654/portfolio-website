@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import Icon from '../components/Icon'
-import { SectionHeading } from '../components/ui'
+import { CoverImage, SectionHeading } from '../components/ui'
 import { projectFilters, projects, socials } from '../data/content'
 import { gsap, ScrollTrigger, addFrameHook } from '../lib/loop'
 import { prefersReducedMotion } from '../lib/device'
@@ -8,7 +8,7 @@ import { prefersReducedMotion } from '../lib/device'
 const HUES = { ml: 4, agents: 14, cv: 24, web: 350, systems: 32 }
 
 function ProjectCover({ p, index }) {
-  if (p.image) return <img className="pcard__img" src={p.image} alt="" loading="lazy" />
+  if (p.image) return <CoverImage className="pcard__img" src={p.image} />
   return (
     <div className="pcard__art" style={{ '--h': HUES[p.category] ?? 4 }}>
       <span className="pcard__art-num">{String(index + 1).padStart(2, '0')}</span>
