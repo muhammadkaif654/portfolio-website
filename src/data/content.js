@@ -63,7 +63,7 @@ export const stats = [
 // Infinite marquee strip under the hero
 export const marquee = [
   'Machine Learning', 'Computer Vision', 'Deep Learning', 'LLMs', 'AI Agents', 'RAG', 'NLP', 'Knowledge Representation',
-  'Scikit-Learn', 'XGBoost', 'OpenCV', 'FAISS', 'LangChain', 'n8n', 'ROS 2', 'Python', 'FastAPI', 'React', 'PostgreSQL', 'MongoDB',
+  'Scikit-Learn', 'XGBoost', 'OpenCV', 'YOLO11', 'FAISS', 'LangChain', 'n8n', 'ROS 2', 'Python', 'FastAPI', 'React', 'PostgreSQL', 'MongoDB',
 ]
 
 /* ----------------------------- SKILLS -------------------------------- */
@@ -90,6 +90,7 @@ export const skillCategories = [
       { name: 'Computer Vision (OpenCV)', short: 'OpenCV', level: 'core' },
       { name: 'Hand & Pose Tracking (MediaPipe)', short: 'MediaPipe', level: 'core' },
       { name: 'CNNs & Transfer Learning (ResNet50)', short: 'CNNs', level: 'core' },
+      { name: 'Object Detection & Tracking (YOLO11, ByteTrack)', short: 'YOLO11', level: 'core' },
       { name: 'Metric Learning (Triplet / ArcFace)', short: 'ArcFace', level: 'core' },
       { name: 'CLIP & Embedding Search (FAISS)', short: 'FAISS', level: 'core' },
     ],
@@ -210,8 +211,8 @@ export const aiExpertise = [
   {
     title: 'Deep Learning & Computer Vision',
     icon: 'eye',
-    text: 'Metric learning, transfer learning and real-time vision: embeddings trained with triplet and ArcFace loss, image retrieval and hand tracking.',
-    tags: ['OpenCV', 'MediaPipe', 'ResNet50', 'CLIP', 'ArcFace', 'FAISS'],
+    text: 'Object detection and tracking, metric learning and real-time vision: fine-tuned YOLO11 detectors, embeddings trained with triplet and ArcFace loss, image retrieval and hand tracking.',
+    tags: ['YOLO11', 'ByteTrack', 'OpenCV', 'MediaPipe', 'ResNet50', 'CLIP', 'ArcFace', 'FAISS'],
     proof: 'SoleMatch: 95.0% Recall@1 on 645 unseen queries',
   },
   {
@@ -292,6 +293,24 @@ export const projects = [
     links: { github: 'https://github.com/muhammadkaif654/solematch-visual-search' },
     image: null,
     highlights: ['95.0% Recall@1 (up from 82.8% zero-shot CLIP)', '645 held-out queries across 43 sneaker models', 'MRR 0.954'],
+  },
+  {
+    id: 'pitchvision',
+    title: 'PitchVision AI — Football Match Analytics',
+    flag: '⚽ Computer Vision & Sports AI',
+    category: 'cv',
+    year: '2026',
+    summary: 'Broadcast football clip in, tactical map out: fine-tuned YOLO11 + ByteTrack tracking, automatic pitch calibration, player stats and heatmaps.',
+    description: "Turns a broadcast football clip into tracked players, a bird's-eye tactical map, player and team metrics, heatmaps and shareable reports, all from a Streamlit dashboard that runs on an ordinary laptop. Players, goalkeepers, referees and the ball are detected with fine-tuned YOLO11 models and tracked with ByteTrack; jersey colours are clustered with KMeans to split the teams; a 32-keypoint pose model plus ORB/RANSAC camera-motion tracking fits a homography to a 105 × 68 m pitch, even with a panning, zooming camera. From there it computes distance, top speed, sprints and possession, and exports annotated H.264 video, CSV/Excel reports and heatmaps. OpenVINO runs the models on an Intel integrated GPU 3–4× faster than the CPU.",
+    tech: ['YOLO11', 'ByteTrack', 'OpenCV', 'Homography', 'OpenVINO', 'Streamlit'],
+    links: { github: 'https://github.com/muhammadkaif654/pitchvision-ai-football-analytics' },
+    image: null,
+    highlights: [
+      'Custom models find the ball in 93% of frames vs 47% pretrained',
+      'mAP50: players 0.88, ball 0.96, pitch keypoints 0.995',
+      '3–4× faster on an Intel GPU via OpenVINO (85 ms/frame)',
+      '~90 unit tests covering metrics, homography and tracking',
+    ],
   },
   {
     id: 'house-price',
@@ -422,19 +441,6 @@ export const projects = [
     links: { github: 'https://github.com/muhammadkaif654/Movie-Manager-DSA' },
     image: null,
     highlights: ['5,044 movies indexed'],
-  },
-  {
-    id: 'retail-pulse',
-    title: 'Retail Pulse OS',
-    flag: '⚙️ Operating Systems',
-    category: 'systems',
-    year: '2025',
-    summary: 'Multi-process pipeline using POSIX shared memory, named pipes and threads for real-time retail analytics.',
-    description: 'A high-performance, multi-process data pipeline to ingest, process, and aggregate massive retail transaction datasets in real-time. Leverages POSIX Shared Memory, Named Pipes, and multi-threading to prevent sequential bottlenecks and maximize multi-core CPU utilization.',
-    tech: ['Python', 'POSIX', 'Multithreading'],
-    links: { github: 'https://github.com/muhammadkaif654/Retail-Pulse-OS' },
-    image: null,
-    highlights: [],
   },
 ]
 
